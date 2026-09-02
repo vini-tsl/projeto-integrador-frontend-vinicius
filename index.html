@@ -1,11 +1,206 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoGym</title>
+    <meta name="description" content="NeoGym - Aplicação web para orientação, acompanhamento e evolução nos seus treinos de forma acessível e dedicada.">
+    <title>NeoGym - Sua Evolução Muscular</title>
+    <link rel="stylesheet" href="assets/css/resets.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> 
 </head>
 <body>
-    
+
+    <!-- Header Principal -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Neo<span>Gym</span></a>
+            <nav aria-label="Navegação Principal">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#treinos">Treinos</a></li>
+                    <li><a href="#matricula">Matrícula</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal (Apenas 1 elemento <main> na página) -->
+    <main id="main-content">
+
+        <!-- Seção 1: Hero / Início -->
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h1>Sua jornada de evolução muscular começa aqui</h1>
+                <p>O NeoGym oferece orientação personalizada, acessível e simplificada para ajudar você a manter a consistência e alcançar seus objetivos.</p>
+                <a href="#matricula" class="btn btn-primary">Começar Agora</a>
+            </div>
+        </section>
+
+        <!-- Seção 2: Sobre -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre o NeoGym</h2>
+                <p class="section-description">
+                    Muita gente quer começar a treinar, mas esbarra na falta de acessibilidade, falta de orientação ou na dúvida sobre como estruturar seus treinos. O NeoGym busca resolver isso oferecendo uma experiência simples e guiada, ajudando você a entender sua rotina e acompanhar cada etapa do seu progresso.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Recursos Principais -->
+        <section id="recursos" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Recursos Principais</h2>
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3>Treinos Estruturados</h3>
+                        <p>Rotinas claras e fáceis de seguir, ajustadas para o seu nível e objetivos.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Acompanhamento de Evolução</h3>
+                        <p>Acompanhe suas cargas, repetições e o crescimento dos seus resultados ao longo do tempo.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Guias e Acessibilidade</h3>
+                        <p>Instruções detalhadas de execução com foco em segurança, técnica correta e autonomia.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Programas Recomendados -->
+        <section id="treinos" class="section">
+            <div class="container">
+                <h2 class="section-title">Programas Recomendados</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <caption>Planos de Treino Disponíveis no NeoGym</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nível</th>
+                                <th scope="col">Frequência</th>
+                                <th scope="col">Foco</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Iniciante</td>
+                                <td>3x por semana</td>
+                                <td>Adaptação &amp; Execução Acessível</td>
+                                <td><span class="badge badge-active">Disponível</span></td>
+                            </tr>
+                            <tr>
+                                <td>Intermediário</td>
+                                <td>4x por semana</td>
+                                <td>Hipertrofia &amp; Força Geral</td>
+                                <td><span class="badge badge-active">Disponível</span></td>
+                            </tr>
+                            <tr>
+                                <td>Avançado</td>
+                                <td>5x a 6x por semana</td>
+                                <td>Periodização &amp; Volume Específico</td>
+                                <td><span class="badge badge-active">Disponível</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Formulário de Pré-Matrícula (Exigência Obrigatória da Aula 03) -->
+        <section id="matricula" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Faça sua Pré-Matrícula</h2>
+                <p class="section-description">Preencha o formulário abaixo para receber seu plano de treino personalizado.</p>
+
+                <form action="#" method="POST" class="form-container">
+                    
+                    <!-- Agrupamento 1: Informações Pessoais -->
+                    <fieldset>
+                        <legend>Dados de Identificação</legend>
+
+                        <div class="form-group">
+                            <label for="nome-aluno">Nome Completo:</label>
+                            <input type="text" id="nome-aluno" name="nome_aluno" required minlength="3" placeholder="Digite seu nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-aluno">E-mail de Contato:</label>
+                            <input type="email" id="email-aluno" name="email_aluno" required placeholder="seuemail@dominio.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone-aluno">Telefone / WhatsApp:</label>
+                            <input type="tel" id="telefone-aluno" name="telefone_aluno" required pattern="[0-9]{10,11}" placeholder="Ex: 11999998888" title="Digite o número com DDD (apenas dígitos)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idade-aluno">Idade:</label>
+                            <input type="number" id="idade-aluno" name="idade_aluno" required min="14" max="100" placeholder="Idade (mínimo 14 anos)">
+                        </div>
+                    </fieldset>
+
+                    <!-- Agrupamento 2: Preferências de Treino e Desafio Extra -->
+                    <fieldset>
+                        <legend>Preferências do Plano (Desafio Extra)</legend>
+
+                        <div class="form-group">
+                            <label for="nivel-objetivo">Nível de Treino Desejado:</label>
+                            <select id="nivel-objetivo" name="nivel_objetivo" required>
+                                <option value="">Selecione uma opção...</option>
+                                <option value="iniciante">Iniciante - Adaptação</option>
+                                <option value="intermediario">Intermediário - Hipertrofia</option>
+                                <option value="avancado">Avançado - Periodização</option>
+                                <option value="personalizado">Acompanhamento Personalizado 100% Acessível</option>
+                            </select>
+                        </div>
+
+                        <!-- Agrupamento interno para Inputs do tipo Radio mutuamente exclusivos -->
+                        <fieldset class="sub-fieldset">
+                            <legend>Turno Preferencial de Treino:</legend>
+                            
+                            <div class="radio-group">
+                                <input type="radio" id="turno-manha" name="turno_treino" value="manha" required>
+                                <label for="turno-manha">Manhã</label>
+                            </div>
+
+                            <div class="radio-group">
+                                <input type="radio" id="turno-tarde" name="turno_treino" value="tarde">
+                                <label for="turno-tarde">Tarde</label>
+                            </div>
+
+                            <div class="radio-group">
+                                <input type="radio" id="turno-noite" name="turno_treino" value="noite">
+                                <label for="turno-noite">Noite</label>
+                            </div>
+                        </fieldset>
+                    </fieldset>
+
+                    <!-- Ações e Desafio Extra (Botão de Ícone Acessível com aria-label) -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Finalizar Inscrição</button>
+                        
+                        <!-- Desafio Extra: Botão sem texto visível com nome acessível computado -->
+                        <button type="reset" class="btn-icon" aria-label="Limpar todos os campos do formulário">
+                            <span aria-hidden="true">&cross;</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Semântico -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 NeoGym — Plataforma Web de Treinos e Acessibilidade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
