@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NeoGym - Aplicação web para orientação, acompanhamento e evolução nos seus treinos de forma acessível e dedicada.">
     <title>NeoGym - Sua Evolução Muscular</title>
-    <link rel="stylesheet" href="assets/css/resets.css">
-    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <link rel="stylesheet" href="assets/styles/resets.css">
+    <link rel="stylesheet" href="assets/styles/style.css"> 
 </head>
 <body>
 
@@ -191,7 +191,45 @@
                 </form>
             </div>
         </section>
+        
+        <!-- Seção Recursos Multimídia - Aula 04 -->
+        <section id="multimidia" class="section">
+            <div class="container">
+                <h2 class="section-title">Aulas e Demonstrações em Vídeo</h2>
+                <p class="section-description">Confira a execução correta dos exercícios e acompanhe nossas orientações em áudio.</p>
 
+                <div class="media-grid">
+                    
+                    <!-- Exemplo 1: Vídeo de Treino -->
+                    <article class="media-card">
+                        <h3>Demonstração de Execução: Agachamento Livre</h3>
+                        
+                        <video controls preload="metadata" poster="assets/images/thumb-agachamento.png" width="100%">
+                            <!-- Fallback de múltiplos formatos para suportar navegadores diferentes -->
+                            <source src="assets/media/agachamento.mp4" type="video/mp4">
+                            <source src="assets/media/agachamento.webm" type="video/webm">
+                            
+                            <!-- Mensagem de fallback para navegadores muito antigos -->
+                            Seu navegador não suporta a execução de vídeos em HTML5.
+                        </video>
+                    </article>
+
+                    <!-- Exemplo 2: Áudio Guiado -->
+                    <article class="media-card">
+                        <h3>Áudio Guiado: Concentração e Respiração</h3>
+                        
+                        <audio controls preload="none">
+                            <!-- Fallback de múltiplos formatos de áudio -->
+                            <source src="assets/media/respiracao-guiada.mp3" type="audio/mpeg">
+                            <source src="assets/media/respiracao-guiada.ogg" type="audio/ogg">
+                            
+                            Seu navegador não suporta a execução de áudio em HTML5.
+                        </audio>
+                    </article>
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Rodapé Semântico -->
