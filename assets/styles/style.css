@@ -389,3 +389,64 @@ legend {
   border-top: 1px solid #334155;
   font-size: 0.95rem;
 }
+
+/* --- 9. Recursos Multimídia (Aula 04) ---*/
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.media-card {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.media-card h3 {
+  font-size: 1.15rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Estilização Responsiva de Vídeo */
+.media-card video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  background-color: var(--secondary-color);
+  outline: none;
+}
+
+/* Estilização Responsiva de Áudio */
+.media-card audio {
+  width: 100%;
+  max-width: 420px;
+  align-self: center;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+/* Ajustes de Acessibilidade de Foco nos Elementos de Mídia */
+.media-card video:focus-visible,
+.media-card audio:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
