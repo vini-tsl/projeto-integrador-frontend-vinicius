@@ -34,3 +34,358 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.section {
+  min-height: 100vh;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+/* 3. Header e Navegação */
+.header {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: table;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-light);
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+nav {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
+
+/* 4. Hero Section */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--secondary-color), #1e293b);
+  color: var(--text-light);
+  padding: 90px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.hero-content p {
+  font-size: 1.35rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* 5. Botões e Acessibilidade de Foco */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+}
+
+/* Foco visível acessível para navegação via Teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* 6. Cards e Tabela */
+.cards-grid {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 20px 0;
+}
+
+.card {
+  display: table-cell;
+  background-color: var(--surface-white);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  vertical-align: top;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+/* Tabela de Treinos */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  background-color: var(--surface-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+caption {
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-active {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* 7. Formulário Acessível */
+.form-container {
+  max-width: 560px;
+  margin: 0 auto;
+  background-color: var(--surface-white);
+  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--secondary-color);
+  padding: 0 8px;
+  font-size: 1rem;
+}
+
+.sub-fieldset {
+  margin-top: 15px;
+  margin-bottom: 0;
+  background-color: var(--bg-light);
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-white);
+  color: var(--text-dark);
+  transition: border-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+}
+
+/* Radio buttons */
+.radio-group {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: var(--primary-color);
+  margin-right: 6px;
+}
+
+.radio-group label {
+  display: inline;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* Botões do Formulário */
+.form-actions {
+  display: table;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-actions .btn-primary {
+  display: table-cell;
+  width: 85%;
+}
+
+.btn-icon {
+  display: table-cell;
+  width: 12%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: var(--radius-md);
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 3%;
+  transition: background-color 0.2s;
+}
+
+.btn-icon:hover,
+.btn-icon:focus {
+  background-color: #fca5a5;
+}
+
+/* 8. Rodapé */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px solid #334155;
+  font-size: 0.95rem;
+}
