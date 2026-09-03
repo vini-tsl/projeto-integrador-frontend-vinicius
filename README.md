@@ -32,11 +32,13 @@ NeoGym/
 ├── index.html
 └── README.md
 
-#Avaliacao 02/09/2026 Lucas Matheus avalia Vinicius
-#Texto da avaliacao:
-#O projeto apresenta uma organização muito boa, principalmente na forma como o CSS foi dividido por partes. As seções de tema, layout, navegação, botões, cards, formulário, tabela, rodapé e multimídia deixam o código mais fácil de acompanhar e demonstram cuidado durante o desenvolvimento.
-A escolha das cores transmite uma identidade visual relacionada à academia, combinando azul vibrante com tons escuros e neutros. O contraste entre essas cores cria uma aparência moderna e profissional para o site.
-A estrutura do formulário está bem cuidada, com campos organizados, agrupamentos usando (fieldset) e (legend), além de diferentes tipos de entrada. Essa organização contribui para uma experiência mais clara para quem deseja realizar uma matrícula.
-A tabela de treinos também está bem planejada visualmente, com cabeçalho destacado, linhas alternadas e uma identificação visual para o status ativo. Esses detalhes ajudam o usuário a localizar e entender as informações com mais facilidade.
-Os vídeos e áudios estão organizados em cards, com bordas arredondadas, sombras e espaçamento adequado. A preocupação com diferentes formatos de vídeo também demonstra atenção à compatibilidade.
-A estrutura semântica do HTML está bem construída, utilizando elementos como (header, nav, main, section, article e footer) de forma adequada.
+Aula 03, HTML5, semântica e formulários✅ HTML5 semântico: foram utilizados header, nav, main, section, article e footer de forma adequada.
+✅ Hierarquia de títulos: as seções e os artigos estão organizados com títulos em uma sequência correta.
+✅ Formulário relacionado ao tema: o formulário está de acordo com a proposta da academia.
+✅ Tipos de campos e validação: foram utilizados campos adequados, além de recursos como required, pattern, min e max.
+✅ Organização e acessibilidade: o uso de fieldset, legend e labels associados contribui para uma estrutura mais clara e acessível.Aula 04, multimídia✅ Mídias relacionadas ao tema: o vídeo e o áudio estão de acordo com a proposta do projeto.
+✅ Vídeo em múltiplos formatos: foram utilizados arquivos MP4 e WebM, com seus respectivos tipos MIME.
+✅ Preload e poster: as configurações foram utilizadas de forma adequada para melhorar o carregamento e a apresentação do vídeo.
+✅ Organização visual: os recursos multimídia estão apresentados em cards, mantendo o padrão visual da página.
+✅ Acessibilidade: os elementos multimídia possuem foco visível e textos de apoio.
+✅ Testes de compatibilidade: os testes dos formatos de mídia foram realizados conforme a atividade.⚠️ Pull Request: não foi encontrado um Pull Request relacionado à atividade no repositório.
