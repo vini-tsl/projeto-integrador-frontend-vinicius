@@ -32,6 +32,7 @@ NeoGym/
 ├── index.html
 └── README.md
 
+#Avaliacao 02/09/2026 Lucas Matheus - Vinicius
 Aula 03, HTML5, semântica e formulários✅ HTML5 semântico: foram utilizados header, nav, main, section, article e footer de forma adequada.
 ✅ Hierarquia de títulos: as seções e os artigos estão organizados com títulos em uma sequência correta.
 ✅ Formulário relacionado ao tema: o formulário está de acordo com a proposta da academia.
