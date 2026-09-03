@@ -31,15 +31,23 @@ NeoGym/
 ├── .gitignore
 ├── index.html
 └── README.md
+```
+## Avaliacao 
+02/09/2026 - avalicação em pares - Lucas Matheus - Vinicius
+### Aula 03, HTML5, semântica e formulários
 
-#Avaliacao 02/09/2026 Lucas Matheus - Vinicius
-Aula 03, HTML5, semântica e formulários✅ HTML5 semântico: foram utilizados header, nav, main, section, article e footer de forma adequada.
-✅ Hierarquia de títulos: as seções e os artigos estão organizados com títulos em uma sequência correta.
-✅ Formulário relacionado ao tema: o formulário está de acordo com a proposta da academia.
-✅ Tipos de campos e validação: foram utilizados campos adequados, além de recursos como required, pattern, min e max.
-✅ Organização e acessibilidade: o uso de fieldset, legend e labels associados contribui para uma estrutura mais clara e acessível.Aula 04, multimídia✅ Mídias relacionadas ao tema: o vídeo e o áudio estão de acordo com a proposta do projeto.
-✅ Vídeo em múltiplos formatos: foram utilizados arquivos MP4 e WebM, com seus respectivos tipos MIME.
-✅ Preload e poster: as configurações foram utilizadas de forma adequada para melhorar o carregamento e a apresentação do vídeo.
-✅ Organização visual: os recursos multimídia estão apresentados em cards, mantendo o padrão visual da página.
-✅ Acessibilidade: os elementos multimídia possuem foco visível e textos de apoio.
-✅ Testes de compatibilidade: os testes dos formatos de mídia foram realizados conforme a atividade.⚠️ Pull Request: não foi encontrado um Pull Request relacionado à atividade no repositório.
+*   **✅ HTML5 semântico:** foram utilizados header, nav, main, section, article e footer de forma adequada.
+*   **✅ Hierarquia de títulos:** as seções e os artigos estão organizados com títulos em uma sequência correta.
+*   **✅ Formulário relacionado ao tema:** o formulário está de acordo com a proposta da academia.
+*   **✅ Tipos de campos e validação:** foram utilizados campos adequados, além de recursos como required, pattern, min e max.
+*   **✅ Organização e acessibilidade:** o uso de fieldset, legend e labels associados contribui para uma estrutura mais clara e acessível.
+
+### Aula 04, multimídia
+
+*   **✅ Mídias relacionadas ao tema:** o vídeo e o áudio estão de acordo com a proposta do projeto.
+*   **✅ Vídeo em múltiplos formatos:** foram utilizados arquivos MP4 e WebM, com seus respectivos tipos MIME.
+*   **✅ Preload e poster:** as configurações foram utilizadas de forma adequada para melhorar o carregamento e a apresentação do vídeo.
+*   **✅ Organização visual:** os recursos multimídia estão apresentados em cards, mantendo o padrão visual da página.
+*   **✅ Acessibilidade:** os elementos multimídia possuem foco visível e textos de apoio.
+*   **✅ Testes de compatibilidade:** os testes dos formatos de mídia foram realizados conforme a atividade.
+*   **⚠️ Pull Request:** não foi encontrado um Pull Request relacionado à atividade no repositório.
