@@ -23,6 +23,27 @@
 }
 
 /* 2. Tipografia e Layout Geral */
+/* rem em TODOS os font-size: rem é relativo ao tamanho de fonte da raiz
+   (que o usuário pode aumentar no navegador), então o texto respeita a
+   acessibilidade; px é fixo e ignora essa preferência. */
+html {
+  /* compensa a navbar sticky ao saltar para âncoras (#sobre etc.) */
+  scroll-padding-top: 5rem;
+}
+
+/* Estados de link na ordem LoVe/HAte (Link, Visited, Hover, Active).
+   Ficam ANTES das regras de componentes (.nav-links a, .btn-primary...)
+   para que elas, com mesma especificidade, vençam por ordem. */
+a:link    { color: var(--primary-color); }
+a:visited { color: #7c3aed; }
+a:hover   { color: var(--primary-hover); }
+a:active  { color: var(--secondary-color); }
+
+/* ID: elemento único da página (título principal do hero) */
+#inicio h1 {
+  text-wrap: balance;
+}
+
 body {
   background-color: var(--surface-white);
   color: var(--text-dark);
@@ -86,35 +107,40 @@ body {
   padding: 15px 0;
 }
 
+/* Aula 08: navbar com Flexbox (logo à esquerda, menu à direita) */
 .nav-container {
-  display: table;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--text-light);
-  display: table-cell;
-  vertical-align: middle;
+}
+
+.logo:link,
+.logo:visited {
+  color: var(--text-light);
 }
 
 .logo span {
   color: var(--primary-color);
 }
 
-nav {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: right;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style-type: none;
 }
 
-.nav-links li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
+/* Combinador descendente (.nav-links a): atinge todos os links do menu,
+   inclusive os do dropdown, sem criar uma classe em cada <a>. */
 .nav-links a {
+  display: block;
   color: var(--text-light);
   font-weight: 500;
   padding: 8px 12px;
@@ -125,7 +151,60 @@ nav {
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: rgba(255, 255, 255, 0.1);
-  color: var(--primary-color);
+  color: var(--focus-ring);
+}
+
+.nav-links a:active {
+  color: var(--text-light);
+}
+
+/* Estado ativo: item da seção atual (declarado depois do :hover para vencer) */
+.nav-links a.ativo {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Dropdown via :hover. position: relative no item pai ancora o submenu
+   absoluto; top: 100% encosta o submenu no pai, sem "buraco" que o fecharia. */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 8px;
+  list-style-type: none;
+  background-color: var(--secondary-color);
+  border: 1px solid #334155;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  text-align: left;
+}
+
+.dropdown:hover > .submenu,
+.dropdown:focus-within > .submenu {
+  display: block;
+}
+
+/* Botão hambúrguer: só estrutura visual (sem clique ainda) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-sm);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-light);
 }
 
 /* 4. Hero Section */
@@ -156,15 +235,21 @@ nav {
 }
 
 /* 5. Botões e Acessibilidade de Foco */
+/* Box model explícito: padding, border e margin */
 .btn {
   display: inline-block;
+  margin: 0;
+  border: 2px solid transparent;
   padding: 12px 28px;
   font-weight: 600;
   border-radius: var(--radius-md);
   transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:active {
   background-color: var(--primary-color);
   color: #ffffff;
 }
@@ -172,6 +257,7 @@ nav {
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: var(--primary-hover);
+  color: #ffffff;
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
 }
 
@@ -222,6 +308,7 @@ select:focus-visible {
 
 table {
   width: 100%;
+  border-collapse: collapse;
   background-color: var(--surface-white);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -449,4 +536,30 @@ legend {
 .media-card audio:focus-visible {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
+}
+
+/* --- 10. Telas estreitas (Aula 08) --- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  /* hambúrguer visível; o clique será implementado em aula futura */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
