@@ -10,16 +10,42 @@
 </head>
 <body>
 
-    <!-- Header Principal -->
+    <!-- Header Principal (sticky) -->
+    <!--
+        Diagnóstico de empilhamento (Aula 08):
+        O dropdown (.submenu) é filho do <header>. O header tem position: sticky
+        + z-index: 1000, o que cria um contexto de empilhamento próprio: o submenu
+        fica acima do conteúdo porque o header inteiro fica acima das seções.
+        Os .media-card ganham transform no :hover, o que também cria um contexto
+        de empilhamento; sem o z-index do header, eles poderiam cobrir o dropdown.
+        A correção foi dar z-index ao header (o contexto certo), e não aumentar
+        valores aleatoriamente.
+    -->
     <header class="header">
         <div class="container nav-container">
             <a href="index.html" class="logo">Neo<span>Gym</span></a>
+
+            <!-- Botão hambúrguer: apenas estrutura (sem clique ainda) -->
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav aria-label="Navegação Principal">
-                <ul class="nav-links">
-                    <li><a href="#inicio">Início</a></li>
+                <ul class="nav-links" id="menu-principal">
+                    <li><a href="#inicio" class="ativo" aria-current="page">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#recursos">Recursos</a></li>
-                    <li><a href="#treinos">Treinos</a></li>
+                    <li class="dropdown">
+                        <a href="#treinos">Treinos</a>
+                        <ul class="submenu">
+                            <li><a href="#treinos">Iniciante</a></li>
+                            <li><a href="#treinos">Intermediário</a></li>
+                            <li><a href="#treinos">Avançado</a></li>
+                            <li><a href="#multimidia">Vídeos e áudios</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#matricula">Matrícula</a></li>
                 </ul>
             </nav>
@@ -239,6 +265,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- Aula 09: lógica em JavaScript (relatório de turmas, veja o Console) -->
+    <script src="assets/js/logica.js" defer></script>
 </body>
 </html>
